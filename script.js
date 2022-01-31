@@ -1,5 +1,5 @@
 let = title
-let = screens
+const = screens
 let = screenPrice
 let = rollback
 let = fullPrice
