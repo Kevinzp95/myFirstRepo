@@ -1,12 +1,20 @@
-const title = 1
+const title = 'myFirstProject';
 
-let screens = 2
-    screenPrice = 3
-    rollback = 4
-    fullPrice = 5
-    adaptive = 6
+let screens = 'Простые, Сложные, Интерактивные';
+let screenPrice = 3;
+let rollback = 63;
+let fullPrice = 5000;
+let adaptive = true;
 
-alert('Script is working!');
-console.log('The last, but not the list');
+
+console.log(typeof title, typeof fullPrice, typeof adaptive);
+console.log(screens.length);
+console.log(screenPrice, fullPrice);
+console.log(screens.toLowerCase());
+console.log(screens.split());
+
+let percent ;
+percent = fullPrice * (rollback/100);
+console.log(percent);
 
 
