@@ -14,10 +14,16 @@ let service2Price = +prompt('Сколько будет стоить данная
 
   let percent;
       percent = fullPrice * (rollback/100);
-      console.log(percent);
+      console.log(percent);                   // процент отката посреднику
 
+console.log(typeof title, typeof fullPrice, typeof adaptive);
+console.log(screens.length);
+console.log("Стоимость верстки экранов" + " " + screenPrice + " " + "долларов");
+console.log("Стоимость разработки сайта" + " " + fullPrice + " " + "долларов");
+console.log(screens.toLowerCase().split(","));
 
 fullPrice = screenPrice + service1Price;
+console.log(fullPrice);
 
   let servicePercentPrice = fullPrice - percent;
   console.log(Math.ceil(servicePercentPrice));
