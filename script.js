@@ -37,9 +37,9 @@ const getServicePercentPrices = function(price5, price6) {
 const getRollbackMessage = function(price) {
       if (price > 30000) {
             return 'Даем cкидку в 10%'
-      } else if (price < 30000 && price > 15000) {
+      } else if (price =< 30000 && price > 15000) {
             return 'Даем cкидку в 5%'
-      } else if (price < 15000 && price > 0) {
+      } else if (price =< 15000 && price >= 0) {
             return 'Скидка не предусмотрена'
       } else if (price < 0) {
             return 'Что-то пошло не так'
