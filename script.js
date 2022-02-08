@@ -44,7 +44,6 @@ const getAllServicePrices = function () {
             }
 
       }
-
       return sum
 }
 
