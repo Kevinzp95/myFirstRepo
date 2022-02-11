@@ -13,7 +13,7 @@ const appData = {
     service2: '',
     start: function () {
 
-    asking: function () {
+    function asking () {
       appData.title = prompt('Как называется ваш проект?', "Калькулятор верстки"); 
       appData.screens = prompt('Какие типы экранов необходимо разработать?', "Простые, Сложные, Интерактивные?")
 
@@ -22,13 +22,13 @@ const appData = {
       } while (!isNumber(appData.screenPrice))
 
       appData.adaptive = confirm("Нужен ли адаптив на сайте?");
-      },
+      }
 
-      isNumber: function (num) {
+      function isNumber (num) {
                   return !isNaN(parseFloat(num)) && isFinite(num)
-      },
+      }
 
-      getAllServicePrices: function () {
+      function getAllServicePrices () {
       let sum = 0
       let servicePrice
 
@@ -51,21 +51,21 @@ const appData = {
             }
 
       return sum
-      },
+      }
 
-      getFullPrice: function () {
+      function getFullPrice () {
             return appData.screenPrice + appData.allServicePrices;
-      },
+      }
 
-      getTitle: function () {
+      function getTitle () {
             return appData.title.trim()[0].toUpperCase() + appData.title.trim().substr(1).toLowerCase();
-      },
+      }
 
-      getServicePercentPrice: function () {
+      function getServicePercentPrice () {
             return appData.fullPrice - (appData.fullPrice * (appData.rollback / 100));
-      },
+      }
 
-      getRollbackMessage: function(price) {
+      function getRollbackMessage (price) {
             if (price >= 30000) {
                   return 'Даем cкидку в 10%'
             } else if (price < 30000 && price >= 15000) {
@@ -78,12 +78,12 @@ const appData = {
     }
   }      
 }   
-    
+
 appData.start()
-appData.allServicePrices = commonPrice.getAllServicePrices()
-appData.fullPrice = totalCost.getFullPrice()
-appData.servicePercentPrice = kickbackMoney.getServicePercentPrice()
-appData.title = denomination.getTitle()
+appData.allServicePrices = getAllServicePrices()
+appData.fullPrice = getFullPrice()
+appData.servicePercentPrice = getServicePercentPrice()
+appData.title = getTitle()
 
 
 console.log(appData.fullPrice);
