@@ -47,7 +47,7 @@ const appData = {
     for (let i = 0; i < 2; i++) {
       let name = ""
       do {
-      name = prompt("Какой дополнительный тип услуги нужен?")
+      name = prompt("Какой дополнительный тип услуги нужен?");
       } while (appData.isNumber(name));
       let price = 0
 
