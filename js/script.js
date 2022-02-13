@@ -2,13 +2,24 @@
 
 const title = document.getElementById('title');
 const mytitle = document.getElementsByTagName('h1');
-const buttons = document.getElementsByClassName('handler_btn');
+
+const buttonstart = document.getElementById('start');
+const buttonreset = document.getElementById('reset');
+const button = document.getElementsByClassName('handler_btn');
+
 const plus = document.querySelector('.screen-btn');
 
-console.log(mytitle[0]);
-console.log(buttons);
-console.log(plus);
+const Items = document.querySelectorAll('.other-items');
+const percentItems = document.querySelector('.other-items.percent')
+const numberItems = document.querySelector('.other-items.number')
 
+const inputRange = document.querySelector('input[type=range]');
+
+const spanRange = document.querySelector('.range-value');
+
+const listInputs = document.getElementsByClassName('total-input');
+
+let allBlocks = document.querySelectorAll('.screen');
 
 const appData = {
   title: "",
@@ -114,4 +125,15 @@ const appData = {
   }
 };
 
-appData.start();
+//appData.start();
+
+console.log('1', mytitle[0]);
+console.log('2', button[0]);
+console.log('2', button[1]);
+console.log('3', plus);
+console.log('4', percentItems);
+console.log('4', numberItems);
+console.log('5', inputRange);
+console.log('6', spanRange);
+console.log('7', listInputs[0], listInputs[1], listInputs[2], listInputs[3], listInputs[4]);
+console.log('8', allBlocks);
