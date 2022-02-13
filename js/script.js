@@ -1,5 +1,15 @@
 'use strict'
 
+const title = document.getElementById('title');
+const mytitle = document.getElementsByTagName('h1');
+const buttons = document.getElementsByClassName('handler_btn');
+const plus = document.querySelector('.screen-btn');
+
+console.log(mytitle[0]);
+console.log(buttons);
+console.log(plus);
+
+
 const appData = {
   title: "",
   screens: [],
@@ -30,17 +40,17 @@ const appData = {
     } while (appData.isNumber(appData.title));
 
     for (let i = 0; i < 2; i++) {
-      let naming = ""
+      let name = ""
       do {
-      naming = prompt("Какие типы экранов необходимо разработать?","Простые, Сложные?");
-      } while (appData.isNumber(naming));
+      name = prompt("Какие типы экранов необходимо разработать?","Простые, Сложные?");
+      } while (appData.isNumber(name));
       let price = 0
 
       do {
       price = prompt("Сколько будет стоить данная работа?");
       } while (!appData.isNumber(price));
 
-      appData.screens.push({id: i, name: naming, price: price})
+      appData.screens.push({id: i, name: name, price: price})
 
     }
 
