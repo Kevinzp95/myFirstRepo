@@ -1,27 +1,42 @@
 'use strict'
 
-// const mytitle = document.getElementsByTagName('h1')[0];
+const mytitle = document.getElementsByTagName('h1')[0];
 
-// const buttonstart = document.getElementsByClassName('handler_btn')[0];
-// const buttonreset = document.getElementsByClassName('handler_btn')[1];
+const buttonstart = document.getElementsByClassName('handler_btn')[0];
+const buttonreset = document.getElementsByClassName('handler_btn')[1];
 
-// const plus = document.querySelector('.screen-btn');
+const plus = document.querySelector('.screen-btn');
 
-// const Items = document.querySelectorAll('.other-items');
-// const percentItems = document.querySelector('.other-items.percent')
-// const numberItems = document.querySelector('.other-items.number')
+const percentItems = document.querySelectorAll('.other-items.percent');
+const numberItems = document.querySelectorAll('.other-items.number');
 
-// const inputRange = document.querySelector('.main-controls__item.rollback', 'input[type=range]');
+const inputRange = document.querySelector('.main-controls__item.rollback').querySelector('[type="range"]');
 
-// const spanRange = document.querySelector('.main-controls__item.rollback', '.range-value');
+const spanRange = document.querySelector('.main-controls__item.rollback').querySelector('.range-value');
 
-// const Input1 = document.getElementsByClassName('total-input')[0];
-// const Input2 = document.getElementsByClassName('total-input')[1];
-// const Input3 = document.getElementsByClassName('total-input')[2];
-// const Input4 = document.getElementsByClassName('total-input')[3];
-// const Input5 = document.getElementsByClassName('total-input')[4];
+const Input1 = document.getElementsByClassName('total-input')[0];
+const Input2 = document.getElementsByClassName('total-input')[1];
+const Input3 = document.getElementsByClassName('total-input')[2];
+const Input4 = document.getElementsByClassName('total-input')[3];
+const Input5 = document.getElementsByClassName('total-input')[4];
 
-// let allBlocks = document.querySelectorAll('.screen');
+let allBlocks = document.querySelectorAll('.screen');
+
+
+console.log('1', mytitle);
+console.log('2', buttonstart);
+console.log(buttonreset);
+console.log('3', plus);
+console.log('4', percentItems);
+console.log(numberItems);
+console.log('5', inputRange);
+console.log('6', spanRange);
+console.log('7', Input1);
+console.log(Input2);
+console.log(Input3);
+console.log(Input4);
+console.log(Input5);
+console.log('8', allBlocks);
 
 const appData = {
   title: "",
@@ -130,19 +145,6 @@ const appData = {
   }
 };
 
-appData.start();
+//appData.start();
 
-// console.log('1', mytitle);
-// console.log('2', buttonstart);
-// console.log(buttonreset);
-// console.log('3', plus);
-// console.log('4', percentItems);
-// console.log(numberItems);
-// console.log('5', inputRange);
-// console.log('6', spanRange);
-// console.log('7', Input1);
-// console.log(Input2);
-// console.log(Input3);
-// console.log(Input4);
-// console.log(Input5);
-// console.log('8', allBlocks);
+
