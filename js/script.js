@@ -1,26 +1,5 @@
 'use strict'
 
-const title = document.getElementById('title');
-const mytitle = document.getElementsByTagName('h1');
-
-const buttonstart = document.getElementById('start');
-const buttonreset = document.getElementById('reset');
-const button = document.getElementsByClassName('handler_btn');
-
-const plus = document.querySelector('.screen-btn');
-
-const Items = document.querySelectorAll('.other-items');
-const percentItems = document.querySelector('.other-items.percent')
-const numberItems = document.querySelector('.other-items.number')
-
-const inputRange = document.querySelector('input[type=range]');
-
-const spanRange = document.querySelector('.range-value');
-
-const listInputs = document.getElementsByClassName('total-input');
-
-let allBlocks = document.querySelectorAll('.screen');
-
 const appData = {
   title: "",
   screens: [],
@@ -51,17 +30,17 @@ const appData = {
     } while (appData.isNumber(appData.title));
 
     for (let i = 0; i < 2; i++) {
-      let name = ""
+      let naming = ""
       do {
-      name = prompt("Какие типы экранов необходимо разработать?","Простые, Сложные?");
-      } while (appData.isNumber(name));
+      naming = prompt("Какие типы экранов необходимо разработать?","Простые, Сложные?");
+      } while (appData.isNumber(naming));
       let price = 0
 
       do {
       price = prompt("Сколько будет стоить данная работа?");
       } while (!appData.isNumber(price));
 
-      appData.screens.push({id: i, name: name, price: price})
+      appData.screens.push({id: i, name: naming, price: price})
 
     }
 
@@ -125,15 +104,4 @@ const appData = {
   }
 };
 
-//appData.start();
-
-console.log('1', mytitle[0]);
-console.log('2', button[0]);
-console.log('2', button[1]);
-console.log('3', plus);
-console.log('4', percentItems);
-console.log('4', numberItems);
-console.log('5', inputRange);
-console.log('6', spanRange);
-console.log('7', listInputs[0], listInputs[1], listInputs[2], listInputs[3], listInputs[4]);
-console.log('8', allBlocks);
+appData.start();
