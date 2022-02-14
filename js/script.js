@@ -1,5 +1,28 @@
 'use strict'
 
+const mytitle = document.getElementsByTagName('h1')[0];
+
+const buttonstart = document.getElementsByClassName('handler_btn')[0];
+const buttonreset = document.getElementsByClassName('handler_btn')[1];
+
+const plus = document.querySelector('.screen-btn');
+
+const Items = document.querySelectorAll('.other-items');
+const percentItems = document.querySelector('.other-items.percent')
+const numberItems = document.querySelector('.other-items.number')
+
+const inputRange = document.querySelector('.main-controls__item.rollback', 'input[type=range]');
+
+const spanRange = document.querySelector('.main-controls__item.rollback', '.range-value');
+
+const Input1 = document.getElementsByClassName('total-input')[0];
+const Input2 = document.getElementsByClassName('total-input')[1];
+const Input3 = document.getElementsByClassName('total-input')[2];
+const Input4 = document.getElementsByClassName('total-input')[3];
+const Input5 = document.getElementsByClassName('total-input')[4];
+
+let allBlocks = document.querySelectorAll('.screen');
+
 const appData = {
   title: "",
   screens: [],
@@ -27,28 +50,28 @@ const appData = {
   asking: function () {
     do {
     appData.title = prompt("Как называется ваш проект?", "Калькулятор верстки")
-    } while (appData.isNumber(appData.title));
+    } while (appData.isNumber(appData.title) || appData.title === '');
 
     for (let i = 0; i < 2; i++) {
-      let naming = ""
+      let name = ''
       do {
-      naming = prompt("Какие типы экранов необходимо разработать?","Простые, Сложные?");
-      } while (appData.isNumber(naming));
+      name = prompt("Какие типы экранов необходимо разработать?","Простые, Сложные?");
+      } while (appData.isNumber(name) || name == '');
       let price = 0
 
       do {
       price = prompt("Сколько будет стоить данная работа?");
       } while (!appData.isNumber(price));
 
-      appData.screens.push({id: i, name: naming, price: price})
+      appData.screens.push({id: i, name: name, price: price})
 
     }
 
     for (let i = 0; i < 2; i++) {
-      let name = ""
+      let name = ''
       do {
       name = prompt("Какой дополнительный тип услуги нужен?");
-      } while (appData.isNumber(name));
+      } while (appData.isNumber(name) || name == '');
       let price = 0
 
         do {
@@ -101,7 +124,25 @@ const appData = {
     console.log(appData.servicePercentPrice);
     console.log(appData.screens);
     console.log(appData.screenPrice);
+    for (let key in appData) {
+      console.log("Свойство:" + key + " " + "Значение:" + appData[key]);
+    }
   }
 };
 
-appData.start();
+//appData.start();
+
+console.log('1', mytitle);
+console.log('2', buttonstart);
+console.log(buttonreset);
+console.log('3', plus);
+console.log('4', percentItems);
+console.log(numberItems);
+console.log('5', inputRange);
+console.log('6', spanRange);
+console.log('7', Input1);
+console.log(Input2);
+console.log(Input3);
+console.log(Input4);
+console.log(Input5);
+console.log('8', allBlocks);
